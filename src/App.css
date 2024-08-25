@@ -160,3 +160,13 @@ label textarea:not(:placeholder-shown) + span {
 @keyframes l8 {
   to {transform:perspective(300px) translateZ(180px);opacity:0}
 }
+
+.charging-time{
+  color: white;
+
+}
+.will-buy{
+  h3{
+    color: white;
+  }
+}
