@@ -1,0 +1,162 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Skryje případné posuvníky */
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* 100% výšky viewportu */
+    width: 100vw; /* 100% šířky viewportu */
+    background-image: url('./img/backgroundEl.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; /* Udržuje obrázek pokrytí celého okna */
+    background-position: center; /* Udržuje obrázek uprostřed okna */
+    background-attachment: fixed; /* Udržuje pozadí pevně na místě */
+    overflow: hidden; /* Skryje posuvníky, pokud jsou */
+    
+}
+.app{
+  margin-top: 15%;
+  font-size: 1.5rem;
+}
+.actual-price{
+  color: white;
+}
+.title-el{
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+}
+.all-content{
+text-align: center;
+
+}
+
+.form-group {
+
+
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+label {
+  border-radius: 4px;
+  width: 40%;
+  box-sizing: border-box;
+  display: block;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input, span, textarea {
+  font-size: 16px;
+  font-family: "Arial", sans-serif;
+  padding: 16px;
+  border:0;
+  outline: none;
+  border-radius: 4px 0px 0px 4px;
+}
+
+span {
+  display:inline-block;
+  position: absolute;
+  margin-top: -60px;
+  color:transparent;
+  transition: all 0.1s ease-in-out;
+}
+
+label:focus-within {
+  border-color:blue;
+}
+
+label:focus-within span, 
+label input:not(:placeholder-shown) + span,
+label textarea:not(:placeholder-shown) + span {
+  font-size: 14px;
+  background-color:white;
+  padding: 0 4px;
+  color:black;
+  margin: -70px 0 0 8px;
+}
+
+
+
+.button-price {
+  display: inline-block;
+  margin-right: 10px;
+  background: #339DFF;
+  color: #fff;
+  text-decoration: none;
+  font-size: 19px;
+  line-height: 38px;
+  border-radius: 0px 50px 50px 00px;
+  transition: all 0.3s;
+  width: 140px;
+  text-align: center;
+  padding: 5px;
+  border: none
+}
+
+.button-price:hover {
+  background: #4cb848;
+  color: #2f00ff;;
+}
+.more-than-acual-price{
+  border: 1px white solid;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  color: white;
+  border-radius: 50px;
+  padding: 30px;
+}
+.stop-buying{
+  display: inline-block;
+  margin-right: 10px;
+  background: red;
+  color: #fff;
+  text-decoration: none;
+  font-size: 19px;
+  line-height: 38px;
+  border-radius:50px;
+  transition: all 0.3s;
+  width: 140px;
+  text-align: center;
+  padding: 5px;
+  border: none
+}
+
+
+
+
+.loader {
+  width: 145px;
+  height: 251px;
+  position: relative;
+  margin: auto;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #ff8001;    
+  box-shadow: 0 0 0 50px;
+  clip-path: polygon(100% 0, 23% 46%, 46% 44%, 15% 69%, 38% 67%, 0 100%, 76% 57%, 53% 58%, 88% 33%, 60% 37%);;
+}
+.loader:after {
+  animation: l8 1s infinite;
+  transform: perspective(300px) translateZ(0px)
+}
+@keyframes l8 {
+  to {transform:perspective(300px) translateZ(180px);opacity:0}
+}
